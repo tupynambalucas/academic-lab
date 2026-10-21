@@ -1,5 +1,3 @@
-# Cortex plugin secrets - contains MCP token
+# Workspace plugin secrets - contains MCP tokens
 mcp_config.json
 mcp_config_*.json
-backup/
-prints/
