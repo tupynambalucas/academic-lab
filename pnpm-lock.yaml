@@ -404,6 +404,18 @@ importers:
 
   knowledge-base/apps/main:
     dependencies:
+      '@academic-lab/collections':
+        specifier: workspace:*
+        version: link:../../collections
+      '@academic-lab/config':
+        specifier: workspace:*
+        version: link:../../../config
+      '@academic-lab/preset':
+        specifier: workspace:*
+        version: link:../../packages/preset
+      '@academic-lab/theme':
+        specifier: workspace:*
+        version: link:../../packages/theme
       '@docusaurus/core':
         specifier: catalog:docs-stack
         version: 3.10.2(@docusaurus/faster@3.10.2(@docusaurus/types@3.10.2(@swc/core@1.16.18)(@swc/html@1.16.18)(clean-css@5.3.3)(cssnano@6.1.2(postcss@8.5.30))(csso@5.0.5)(esbuild@0.28.2)(html-minifier-terser@7.2.0)(lightningcss@1.32.0)(postcss@8.5.30)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(supports-color@9.4.0)(svgo@3.3.5))(clean-css@5.3.3)(cssnano@6.1.2(postcss@8.5.30))(csso@5.0.5)(esbuild@0.28.2)(html-minifier-terser@7.2.0)(postcss@8.5.30)(svgo@3.3.5))(@mdx-js/react@3.1.1(@types/react@19.3.0)(react@19.3.1))(@rspack/core@1.7.12)(@swc/core@1.16.18)(@swc/html@1.16.18)(clean-css@5.3.3)(cssnano@6.1.2(postcss@8.5.30))(csso@5.0.5)(debug@4.4.3(supports-color@9.4.0))(esbuild@0.28.2)(html-minifier-terser@7.2.0)(lightningcss@1.32.0)(postcss@8.5.30)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(supports-color@9.4.0)(svgo@3.3.5)(typescript@6.0.3)
@@ -452,18 +464,6 @@ importers:
       '@docusaurus/utils':
         specifier: catalog:docs-stack
         version: 3.10.2(@swc/core@1.16.18)(@swc/html@1.16.18)(clean-css@5.3.3)(cssnano@6.1.2(postcss@8.5.30))(csso@5.0.5)(esbuild@0.28.2)(html-minifier-terser@7.2.0)(lightningcss@1.32.0)(postcss@8.5.30)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(supports-color@9.4.0)(svgo@3.3.5)
-      '@knowledge-lab/collections':
-        specifier: workspace:*
-        version: link:../../collections
-      '@knowledge-lab/config':
-        specifier: workspace:*
-        version: link:../../../config
-      '@knowledge-lab/preset':
-        specifier: workspace:*
-        version: link:../../packages/preset
-      '@knowledge-lab/theme':
-        specifier: workspace:*
-        version: link:../../packages/theme
       '@mdx-js/react':
         specifier: catalog:docs-stack
         version: 3.1.1(@types/react@19.3.0)(react@19.3.1)
@@ -516,7 +516,7 @@ importers:
 
   knowledge-base/collections:
     devDependencies:
-      '@knowledge-lab/config':
+      '@academic-lab/config':
         specifier: workspace:*
         version: link:../../config
       prettier:
@@ -525,6 +525,15 @@ importers:
 
   knowledge-base/packages/preset:
     dependencies:
+      '@academic-lab/collections':
+        specifier: workspace:*
+        version: link:../../collections
+      '@academic-lab/config':
+        specifier: workspace:*
+        version: link:../../../config
+      '@academic-lab/theme':
+        specifier: workspace:*
+        version: link:../theme
       '@docusaurus/core':
         specifier: catalog:docs-stack
         version: 3.10.2(@docusaurus/faster@3.10.2(@docusaurus/types@3.10.2(@swc/core@1.16.18)(@swc/html@1.16.18)(clean-css@5.3.3)(cssnano@6.1.2(postcss@8.5.30))(csso@5.0.5)(esbuild@0.28.2)(html-minifier-terser@7.2.0)(lightningcss@1.32.0)(postcss@8.5.30)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(supports-color@9.4.0)(svgo@3.3.5))(clean-css@5.3.3)(cssnano@6.1.2(postcss@8.5.30))(csso@5.0.5)(esbuild@0.28.2)(html-minifier-terser@7.2.0)(postcss@8.5.30)(svgo@3.3.5))(@mdx-js/react@3.1.1(@types/react@19.3.0)(react@19.3.1))(@rspack/core@1.7.12)(@swc/core@1.16.18)(@swc/html@1.16.18)(clean-css@5.3.3)(cssnano@6.1.2(postcss@8.5.30))(csso@5.0.5)(debug@4.4.3(supports-color@9.4.0))(esbuild@0.28.2)(html-minifier-terser@7.2.0)(lightningcss@1.32.0)(postcss@8.5.30)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(supports-color@9.4.0)(svgo@3.3.5)(typescript@6.0.3)
@@ -573,15 +582,6 @@ importers:
       '@docusaurus/utils':
         specifier: catalog:docs-stack
         version: 3.10.2(@swc/core@1.16.18)(@swc/html@1.16.18)(clean-css@5.3.3)(cssnano@6.1.2(postcss@8.5.30))(csso@5.0.5)(esbuild@0.28.2)(html-minifier-terser@7.2.0)(lightningcss@1.32.0)(postcss@8.5.30)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(supports-color@9.4.0)(svgo@3.3.5)
-      '@knowledge-lab/collections':
-        specifier: workspace:*
-        version: link:../../collections
-      '@knowledge-lab/config':
-        specifier: workspace:*
-        version: link:../../../config
-      '@knowledge-lab/theme':
-        specifier: workspace:*
-        version: link:../theme
       prism-react-renderer:
         specifier: catalog:docs-stack
         version: 2.4.1(react@19.3.1)
@@ -616,6 +616,9 @@ importers:
 
   knowledge-base/packages/theme:
     dependencies:
+      '@academic-lab/config':
+        specifier: workspace:*
+        version: link:../../../config
       '@docusaurus/plugin-content-blog':
         specifier: catalog:docs-stack
         version: 3.10.2(a13a88106fa4ba9e58b4156586046911)
@@ -634,9 +637,6 @@ importers:
       '@docusaurus/theme-mermaid':
         specifier: catalog:docs-stack
         version: 3.10.2(a13a88106fa4ba9e58b4156586046911)
-      '@knowledge-lab/config':
-        specifier: workspace:*
-        version: link:../../../config
       clsx:
         specifier: catalog:web-stack
         version: 2.1.1

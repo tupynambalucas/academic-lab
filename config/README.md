@@ -1,6 +1,6 @@
 # Configuration Workspace
 
-The `@knowledge-lab/config` package provides the centralized configuration foundation for Knowledge Lab. It establishes the single source of truth for repository variables, formatting definitions, and shared compiler settings.
+The `@academic-lab/config` package provides the centralized configuration foundation for Academic Lab. It establishes the single source of truth for repository variables, formatting definitions, and shared compiler settings.
 
 ## Overview
 
@@ -18,5 +18,5 @@ This workspace isolates project configuration from application runtime code, ens
 Other workspaces consume these configurations via workspace dependencies:
 
 ```typescript
-import projectConfig from '@knowledge-lab/config/project.config';
+import projectConfig from '@academic-lab/config/project.config';
 ```

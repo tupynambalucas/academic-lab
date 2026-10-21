@@ -22,9 +22,9 @@ Os arquivos markdown da documentação precisam ser isolados e melhor categoriza
 - [ ] Renomear a subpasta `docs` (movida de portal/content/docs) para `handbook` (O caminho final será `docs/content/collections/handbook`).
 - [ ] Remover o aninhamento e pastas vazias (ex: `namespaces/portal/content/`).
 
-### Fase 3: Padronização de Namespaces (`@knowledge-lab`)
+### Fase 3: Padronização de Namespaces (`@academic-lab`)
 Todos os `package.json` de todas as workspaces e subpastas devem ser analisados recursivamente para usar o novo namespace do projeto:
-- [ ] Alterar os campos `name` nos `package.json` para o padrão `@knowledge-lab/*` (Exemplo: `@knowledge-lab/docs-content`, `@knowledge-lab/docs-website`, `@knowledge-lab/config`).
+- [ ] Alterar os campos `name` nos `package.json` para o padrão `@academic-lab/*` (Exemplo: `@academic-lab/docs-content`, `@academic-lab/docs-website`, `@academic-lab/config`).
 - [ ] Atualizar todas as dependências internas nestes `package.json` para refletirem os novos nomes.
 - [ ] Atualizar referências no `package.json` raiz (`scripts` e `dependencies`).
 
@@ -40,7 +40,7 @@ O novo website será puramente técnico, minimalista, de idioma único e focado.
 O foco deve estar no texto. Todo o "peso" visual herdado deve ser eliminado.
 - [ ] Remover a dependência de pacotes obsoletos como `studio-assets` do package.json do website e da lógica de sincronização no `docusaurus.config.ts`.
 - [ ] Configurar o docusaurus para usar somente a sua pasta `static` padrão, limpa.
-- [ ] Refatorar a página inicial (`src/pages/home` ou `src/pages/index`) para ser uma Home simples e descritiva voltada exclusivamente para o projeto **Knowledge Lab**.
+- [ ] Refatorar a página inicial (`src/pages/home` ou `src/pages/index`) para ser uma Home simples e descritiva voltada exclusivamente para o projeto **Academic Lab**.
 
 ### Fase 6: Alinhamento de Configurações (Root e TSConfig)
 Garantir que o monorepo compreenda a nova forma da arquitetura achatada.
@@ -48,4 +48,4 @@ Garantir que o monorepo compreenda a nova forma da arquitetura achatada.
   - `config`
   - `docs/content`
   - `docs/website`
-- [ ] **TypeScript (`tsconfig.json`)**: Revisar a estrutura de `tsconfig.json` na raiz do projeto e em `docs/website` para garantir que referências (`references`) e mapeamento de caminhos (`paths`) apontam corretamente para os novos locais e namespaces `@knowledge-lab/*`.
+- [ ] **TypeScript (`tsconfig.json`)**: Revisar a estrutura de `tsconfig.json` na raiz do projeto e em `docs/website` para garantir que referências (`references`) e mapeamento de caminhos (`paths`) apontam corretamente para os novos locais e namespaces `@academic-lab/*`.

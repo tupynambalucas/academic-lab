@@ -13,7 +13,7 @@ This document serves as the sub-domain context router (Layer 3) for the apps/mai
 
 ## Purpose
 
-This workspace (`@knowledge-lab/app-main`) hosts the main Docusaurus portal website for Knowledge Lab, consuming collections from knowledge-base/collections/ via `@knowledge-lab/preset`.
+This workspace (`@academic-lab/app-main`) hosts the main Docusaurus portal website for Academic Lab, consuming collections from knowledge-base/collections/ via `@academic-lab/preset`.
 
 ## Directory Layout
 

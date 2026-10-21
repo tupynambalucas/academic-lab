@@ -1,6 +1,6 @@
 # Main Portal Application
 
-The `@knowledge-lab/app-main` package is the primary Docusaurus documentation portal for Knowledge Lab. It renders collections dynamically loaded from knowledge-base/collections/ using `@knowledge-lab/preset` and `@knowledge-lab/theme`.
+The `@academic-lab/app-main` package is the primary Docusaurus documentation portal for Academic Lab. It renders collections dynamically loaded from knowledge-base/collections/ using `@academic-lab/preset` and `@academic-lab/theme`.
 
 ## Architecture
 

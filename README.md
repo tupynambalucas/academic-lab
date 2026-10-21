@@ -1,4 +1,4 @@
-# Knowledge Lab
+# Academic Lab
 
 A structured, automated repository dedicated to accumulating and organizing academic knowledge and AI-assisted learning.
 
@@ -19,5 +19,5 @@ This repository is designed to serve as a comprehensive learning and reference e
 
 ## Getting Started
 
-To interact with Knowledge Lab or add new study plans, refer to the [plans directory](./.agents/plans/).
+To interact with Academic Lab or add new study plans, refer to the [plans directory](./.agents/plans/).
 For agent context and operational rules, refer to the [Root Agent Context](./AGENTS.md).

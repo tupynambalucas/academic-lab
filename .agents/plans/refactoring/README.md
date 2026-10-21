@@ -1,6 +1,6 @@
 # Plano Geral de Refatoração do Monorepo
 
-Este documento centraliza e rege as etapas de refatoração necessárias para estruturar o monorepo do projeto Knowledge Lab de forma limpa, previsível e escalável.
+Este documento centraliza e rege as etapas de refatoração necessárias para estruturar o monorepo do projeto Academic Lab de forma limpa, previsível e escalável.
 
 ## Índice de Etapas
 
@@ -8,7 +8,7 @@ Este documento centraliza e rege as etapas de refatoração necessárias para es
 Foco inicial na raiz do projeto: limpeza de `pnpm-workspace.yaml`, padronização rigorosa do `eslint.config.ts`, remoção de dependências mortas (relacionadas a um workspace antigo `app`), e padronização dos namespaces dos pacotes para `@tupynambalucas/*`.
 
 ### 2. [Refatoração e Estruturação das Workspaces (Config e Docs)](./02-workspaces-refactoring.md)
-Foco na padronização estrutural de `docs` (remoção da pasta docusaurus e centralização) e unificação das namespaces para `@knowledge-lab/*`.
+Foco na padronização estrutural de `docs` (remoção da pasta docusaurus e centralização) e unificação das namespaces para `@academic-lab/*`.
 
 ### 3. [Refatoração de Agentes, Skills e Documentação](./03-agents-and-documentation.md)
 Foco na generalização do projeto para "estudos acadêmicos impulsionados por IA". Inclui a atualização de todas as skills, a revisão profunda de `AGENTS.md` e `README.md` (removendo viés de assuntos específicos) e a criação do template `LEARNING_CONTEXT.md` na raiz.

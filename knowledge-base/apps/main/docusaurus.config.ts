@@ -1,11 +1,11 @@
 import type { Config } from "@docusaurus/types";
-import type { MonorepoPresetOptions } from "@knowledge-lab/preset/options";
-import { getBaseThemeConfig } from "@knowledge-lab/preset/themeConfig";
-import { createProjectVariablesParseFrontMatter } from "@knowledge-lab/preset";
+import type { MonorepoPresetOptions } from "@academic-lab/preset/options";
+import { getBaseThemeConfig } from "@academic-lab/preset/themeConfig";
+import { createProjectVariablesParseFrontMatter } from "@academic-lab/preset";
 import path from "node:path";
 import fs from "node:fs";
 import { createRequire } from "node:module";
-import projectConfig from "@knowledge-lab/config/project.config";
+import projectConfig from "@academic-lab/config/project.config";
 
 import dotenv from "dotenv";
 dotenv.config();
@@ -16,26 +16,26 @@ const require = createRequire(import.meta.url);
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const rawConfig = (projectConfig as any)?.default ?? projectConfig;
 const cleanConfig: Record<string, string> = {
-  PROJECT_NAME: String(rawConfig.PROJECT_NAME ?? "Knowledge Lab"),
+  PROJECT_NAME: String(rawConfig.PROJECT_NAME ?? "Academic Lab"),
   PROJECT_DISPLAY_NAME: String(
-    rawConfig.PROJECT_DISPLAY_NAME ?? "Knowledge Lab",
+    rawConfig.PROJECT_DISPLAY_NAME ?? "Academic Lab",
   ),
   PROJECT_DOMAIN: String(rawConfig.PROJECT_DOMAIN ?? "tupynambalucas.dev"),
   PROJECT_DOCS_URL: String(
     rawConfig.PROJECT_DOCS_URL ?? "https://docs.tupynambalucas.dev",
   ),
   PROJECT_INTERNAL_HOST: String(
-    rawConfig.PROJECT_INTERNAL_HOST ?? "knowledge-lab.internal",
+    rawConfig.PROJECT_INTERNAL_HOST ?? "academic-lab.internal",
   ),
   GITHUB_ORG: String(rawConfig.GITHUB_ORG ?? "tupynambalucas"),
-  REPOSITORY_NAME: String(rawConfig.REPOSITORY_NAME ?? "Knowledge-Lab"),
+  REPOSITORY_NAME: String(rawConfig.REPOSITORY_NAME ?? "academic-lab"),
   REPOSITORY_OWNER: String(rawConfig.REPOSITORY_OWNER ?? "tupynambalucas"),
   AUTHOR_NAME: String(
     rawConfig.AUTHOR_NAME ?? "Tupynambá Lucas Varela Rodrigues",
   ),
   AUTHOR_EMAIL: String(rawConfig.AUTHOR_EMAIL ?? "contato@tupynambalucas.dev"),
   STUDENT_NAME: String(rawConfig.STUDENT_NAME ?? "Lucas Tupynambá"),
-  SITE_TITLE: String(rawConfig.SITE_TITLE ?? "Knowledge Lab"),
+  SITE_TITLE: String(rawConfig.SITE_TITLE ?? "Academic Lab"),
   SITE_TAGLINE: String(
     rawConfig.SITE_TAGLINE ??
       "Laboratório de Pesquisa Acadêmica e Engenharia do Conhecimento",
@@ -89,7 +89,7 @@ const config: Config = {
 
   presets: [
     [
-      require.resolve("@knowledge-lab/preset"),
+      require.resolve("@academic-lab/preset"),
       {
         liveCodeblock: {
           playgroundPosition: "bottom",
@@ -99,7 +99,7 @@ const config: Config = {
             id: "default",
             collection: "docs-template",
             routeBasePath: "docs",
-            sidebarPath: require.resolve("@knowledge-lab/preset/sidebars"),
+            sidebarPath: require.resolve("@academic-lab/preset/sidebars"),
           },
         ],
         blog: {

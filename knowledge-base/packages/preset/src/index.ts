@@ -39,7 +39,7 @@ export default function monorepoPreset(
     sitemap,
     svgr,
     theme = {
-      customCss: [require.resolve("@knowledge-lab/theme/src/css/custom.css")],
+      customCss: [require.resolve("@academic-lab/theme/src/css/custom.css")],
     },
     liveCodeblock,
     gtag,
@@ -48,7 +48,7 @@ export default function monorepoPreset(
   } = opts;
 
   const collectionsPkg =
-    require.resolve("@knowledge-lab/collections/package.json");
+    require.resolve("@academic-lab/collections/package.json");
   const collectionsRoot = path.dirname(collectionsPkg);
 
   const processCollection = (
@@ -99,7 +99,7 @@ export default function monorepoPreset(
   }
 
   // LOCAL OVERRIDE LAYER
-  themes.push(makePluginConfig(require.resolve("@knowledge-lab/theme"), {}));
+  themes.push(makePluginConfig(require.resolve("@academic-lab/theme"), {}));
 
   if ("gtag" in themeConfig) {
     throw new Error(

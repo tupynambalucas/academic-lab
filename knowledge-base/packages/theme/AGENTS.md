@@ -13,7 +13,7 @@ This document serves as the sub-domain context router (Layer 3) for the packages
 
 ## Purpose
 
-This workspace (`@knowledge-lab/theme`) implements a custom Docusaurus theme plugin and provides the centralized styling and Infima design tokens for Knowledge Lab.
+This workspace (`@academic-lab/theme`) implements a custom Docusaurus theme plugin and provides the centralized styling and Infima design tokens for Academic Lab.
 
 ## Directory Layout
 

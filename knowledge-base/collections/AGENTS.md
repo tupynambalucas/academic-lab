@@ -13,7 +13,7 @@ This document serves as the sub-domain context router (Layer 3) for the collecti
 
 ## Purpose
 
-This workspace (`@knowledge-lab/collections`) stores modular documentation and blog collections that can be dynamically imported into Docusaurus portal applications.
+This workspace (`@academic-lab/collections`) stores modular documentation and blog collections that can be dynamically imported into Docusaurus portal applications.
 
 ## Directory Layout
 

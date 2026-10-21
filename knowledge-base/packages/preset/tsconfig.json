@@ -1,5 +1,5 @@
 {
-  "extends": "@knowledge-lab/config/tsconfig.base.json",
+  "extends": "@academic-lab/config/tsconfig.base.json",
   "compilerOptions": {
     "jsx": "react",
     "composite": true,

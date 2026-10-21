@@ -1,6 +1,6 @@
-# Knowledge Lab Agent Context
+# Academic Lab Agent Context
 
-This document serves as the root context router (Layer 1) for AI agents operating in the Knowledge Lab project.
+This document serves as the root context router (Layer 1) for AI agents operating in the Academic Lab project.
 
 ## Agent Persona
 

@@ -5,7 +5,7 @@ description: Use this skill to create, analyze, or update technical documentatio
 
 # Docusaurus Docs Expert
 
-This skill defines the authoritative standards, directory structures, design patterns, and validation workflows for the **@tupynambalucas/knowledge-lab** documentation workspace (`docs/`).
+This skill defines the authoritative standards, directory structures, design patterns, and validation workflows for the **@tupynambalucas/academic-lab** documentation workspace (`docs/`).
 
 ---
 
@@ -80,7 +80,7 @@ All files placed inside the documentation directories MUST strictly adhere to th
 
 ### F. Explicit Naming & Prohibited Tokens
 
-- **Explicit Project Names**: The project name ("@tupynambalucas/knowledge-lab") and author ("Lucas Tupynambá") MUST be written explicitly. The use of generic AST tokens (e.g., `%PROJECT_NAME%`) is strictly forbidden, as per the monorepo rules.
+- **Explicit Project Names**: The project name ("@tupynambalucas/academic-lab") and author ("Lucas Tupynambá") MUST be written explicitly. The use of generic AST tokens (e.g., `%PROJECT_NAME%`) is strictly forbidden, as per the monorepo rules.
 
 ---
 

@@ -12,7 +12,7 @@ This document serves as the bounded context router (Layer 2) for the knowledge-b
 
 ## Purpose
 
-The knowledge-base bounded context coordinates dynamic documentation and blog collections, custom Docusaurus extensions, and portal applications for Knowledge Lab.
+The knowledge-base bounded context coordinates dynamic documentation and blog collections, custom Docusaurus extensions, and portal applications for Academic Lab.
 
 ## Directory Layout
 

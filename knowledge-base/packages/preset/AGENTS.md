@@ -13,7 +13,7 @@ This document serves as the sub-domain context router (Layer 3) for the packages
 
 ## Purpose
 
-This workspace (`@knowledge-lab/preset`) provides a custom Docusaurus preset that dynamically resolves documentation and blog collections, registers theme plugins, and orchestrates MDX remark transformers.
+This workspace (`@academic-lab/preset`) provides a custom Docusaurus preset that dynamically resolves documentation and blog collections, registers theme plugins, and orchestrates MDX remark transformers.
 
 ## Directory Layout
 

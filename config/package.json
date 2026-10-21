@@ -1,5 +1,5 @@
 {
-  "name": "@knowledge-lab/config",
+  "name": "@academic-lab/config",
   "version": "1.0.0",
   "private": true,
   "description": "Global configuration and constant definitions shared across all workspaces.",
@@ -8,7 +8,7 @@
   "homepage": "https://docs.tupynambalucas.dev",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tupynambalucas/Knowledge-Lab.git"
+    "url": "git+https://github.com/tupynambalucas/academic-lab.git"
   },
   "type": "module",
   "main": "./src/prettierrc.json",

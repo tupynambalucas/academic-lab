@@ -1,8 +1,8 @@
 {
-  "name": "@knowledge-lab/collections",
+  "name": "@academic-lab/collections",
   "version": "1.0.0",
   "private": true,
-  "description": "Dynamic documentation and blog content collections for Knowledge Lab.",
+  "description": "Dynamic documentation and blog content collections for Academic Lab.",
   "type": "module",
   "exports": {
     "./docs/*": "./docs/*",
@@ -13,7 +13,7 @@
     "lint": "eslint ."
   },
   "devDependencies": {
-    "@knowledge-lab/config": "workspace:*",
+    "@academic-lab/config": "workspace:*",
     "prettier": "catalog:tooling-stack"
   }
 }

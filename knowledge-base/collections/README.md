@@ -1,6 +1,6 @@
 # Collections Workspace
 
-The `@knowledge-lab/collections` package serves as the modular repository for documentation and blog collections within Knowledge Lab.
+The `@academic-lab/collections` package serves as the modular repository for documentation and blog collections within Academic Lab.
 
 ## Overview
 

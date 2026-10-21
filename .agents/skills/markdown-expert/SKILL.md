@@ -49,9 +49,9 @@ The following rules apply to all documentation tasks, regardless of file extensi
   1. Standard relative paths (e.g., `./relative-file.md` or `../sibling/file.md`).
   2. Fully-qualified public web URLs with explicit domains (e.g., `https://example.com` or external domain references).
 
-### H. Project Variables (Atualizado para @tupynambalucas/knowledge-lab)
+### H. Project Variables (Atualizado para @tupynambalucas/academic-lab)
 
-- **Contexto Central**: O projeto atual é o **@tupynambalucas/knowledge-lab**, de autoria de **Lucas Tupynambá**.
+- **Contexto Central**: O projeto atual é o **@tupynambalucas/academic-lab**, de autoria de **Lucas Tupynambá**.
 - **Regra de Nomenclatura**: O nome do projeto e da autora DEVEM ser utilizados explicitamente em todos os arquivos Markdown. Fica estritamente proibido o uso de variáveis genéricas, placeholders ou tokens de AST (como `%PROJECT_DOMAIN%` ou `%PROJECT_NAME%`).
 - **Configuração**: Esta abordagem direta substitui a antiga configuração centralizada (`@monorepo/shared-config...`), mantendo a clareza e autoria evidentes na documentação.
 

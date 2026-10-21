@@ -42,9 +42,9 @@ The following rules apply to all documentation tasks, regardless of file extensi
 
 - All files must comply with the root Prettier formatting rules (2-space indentation, max 100-character line width, hyphen-based unordered lists, and proper JavaScript/TypeScript code block styling).
 
-### G. Project Variables (Atualizado para @tupynambalucas/knowledge-lab)
+### G. Project Variables (Atualizado para @tupynambalucas/academic-lab)
 
-- **Contexto Central**: O projeto atual é o **@tupynambalucas/knowledge-lab**, de autoria de **Lucas Tupynambá**.
+- **Contexto Central**: O projeto atual é o **@tupynambalucas/academic-lab**, de autoria de **Lucas Tupynambá**.
 - **Regra de Nomenclatura**: O nome do projeto e da autora DEVEM ser utilizados explicitamente na documentação e arquivos `AGENTS.md`. Fica estritamente proibido o uso de variáveis genéricas, placeholders ou tokens de AST (como `%PROJECT_DOMAIN%` ou `%PROJECT_NAME%`).
 - **Configuração**: Esta abordagem direta substitui a antiga configuração centralizada (`@monorepo/shared-config...`), simplificando a identificação do projeto.
 

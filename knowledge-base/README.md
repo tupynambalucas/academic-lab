@@ -1,6 +1,6 @@
 # Knowledge Base Platform
 
-The Knowledge Base bounded context orchestrates academic documentation collections, custom Docusaurus extensions, and the main portal website for Knowledge Lab.
+The Knowledge Base bounded context orchestrates academic documentation collections, custom Docusaurus extensions, and the main portal website for Academic Lab.
 
 ## Architecture
 

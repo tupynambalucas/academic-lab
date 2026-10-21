@@ -1,7 +1,7 @@
 # 04 - Personalização e Variáveis Dinâmicas
 
 ## Objetivos Globais
-Tornar o monorepo `knowledge-lab` perfeitamente adaptável para diferentes estudantes ou pesquisadores que fizerem fork/deploy. Para isso, vamos refatorar o arquivo central de configurações (`project.config.ts`) de modo que ele sirva como a "bússola" de variáveis da pessoa, alimentando tanto a documentação gerada (Docusaurus) quanto fornecendo contexto estruturado para os Agentes de IA.
+Tornar o monorepo `academic-lab` perfeitamente adaptável para diferentes estudantes ou pesquisadores que fizerem fork/deploy. Para isso, vamos refatorar o arquivo central de configurações (`project.config.ts`) de modo que ele sirva como a "bússola" de variáveis da pessoa, alimentando tanto a documentação gerada (Docusaurus) quanto fornecendo contexto estruturado para os Agentes de IA.
 
 ---
 

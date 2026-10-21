@@ -1,6 +1,6 @@
 # Theme Package
 
-The `@knowledge-lab/theme` package implements the custom Docusaurus theme plugin and global stylesheets for Knowledge Lab using the Thin Orchestrator pattern.
+The `@academic-lab/theme` package implements the custom Docusaurus theme plugin and global stylesheets for Academic Lab using the Thin Orchestrator pattern.
 
 ## Architecture
 
@@ -10,9 +10,9 @@ The `@knowledge-lab/theme` package implements the custom Docusaurus theme plugin
 
 ## Usage
 
-This package is automatically injected by `@knowledge-lab/preset`:
+This package is automatically injected by `@academic-lab/preset`:
 
 ```typescript
-// custom.css is imported by default in @knowledge-lab/preset
+// custom.css is imported by default in @academic-lab/preset
 // theme plugin is registered automatically
 ```

@@ -3,10 +3,10 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@knowledge-lab/preset": ["../../packages/preset/src/index.ts"],
-      "@knowledge-lab/preset/*": ["../../packages/preset/src/*"],
-      "@knowledge-lab/theme": ["../../packages/theme/src/index.ts"],
-      "@knowledge-lab/theme/*": ["../../packages/theme/src/*"]
+      "@academic-lab/preset": ["../../packages/preset/src/index.ts"],
+      "@academic-lab/preset/*": ["../../packages/preset/src/*"],
+      "@academic-lab/theme": ["../../packages/theme/src/index.ts"],
+      "@academic-lab/theme/*": ["../../packages/theme/src/*"]
     },
     "ignoreDeprecations": "6.0"
   },

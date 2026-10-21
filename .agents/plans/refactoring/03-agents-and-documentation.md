@@ -1,7 +1,7 @@
 # 03 - Refatoração de Agentes, Skills e Documentação
 
 ## Objetivos Globais
-Atualizar a identidade do projeto nas ferramentas de IA (skills e routers) para refletir o escopo generalista do **Knowledge Lab**. O repositório deixará de ser focado exclusivamente em assuntos específicos (ex: Revit) e se tornará uma base universal focada em estudos acadêmicos impulsionados por Inteligência Artificial.
+Atualizar a identidade do projeto nas ferramentas de IA (skills e routers) para refletir o escopo generalista do **Academic Lab**. O repositório deixará de ser focado exclusivamente em assuntos específicos (ex: Revit) e se tornará uma base universal focada em estudos acadêmicos impulsionados por Inteligência Artificial.
 
 ---
 
@@ -10,7 +10,7 @@ Atualizar a identidade do projeto nas ferramentas de IA (skills e routers) para 
 ### Fase 1: Atualização das Skills (com `skill-expert`)
 Todas as skills customizadas precisam ser adaptadas ao novo propósito do monorepo.
 - [ ] Inspecionar todas as skills ativas em `.agents/skills/`.
-- [ ] Utilizar a skill `skill-expert` para refatorar os arquivos `SKILL.md` (e potenciais scripts) adequando o contexto para pertencer ao projeto `@tupynambalucas/knowledge-lab`.
+- [ ] Utilizar a skill `skill-expert` para refatorar os arquivos `SKILL.md` (e potenciais scripts) adequando o contexto para pertencer ao projeto `@tupynambalucas/academic-lab`.
 - [ ] Assegurar que as instruções das skills estão coerentes com a nova estrutura de documentação (ex: nova estrutura do Docusaurus e pasta `handbook`).
 
 ### Fase 2: Criação do Contexto de Estudo do Usuário (`LEARNING_CONTEXT.md`)
@@ -26,5 +26,5 @@ Os arquivos que guiam o comportamento padrão das IAs no repositório devem ser 
 
 ### Fase 4: Atualização dos READMEs (com `markdown-expert`)
 A documentação legível por humanos deve ser sincronizada com a nova missão do projeto.
-- [ ] Atualizar o `README.md` raiz para descrever o Knowledge Lab como um ecossistema de estudos acadêmicos guiados por IA.
+- [ ] Atualizar o `README.md` raiz para descrever o Academic Lab como um ecossistema de estudos acadêmicos guiados por IA.
 - [ ] Refatorar os `README.md` das workspaces internas (`docs`, `config`, etc) para refletirem seus papéis simplificados e puramente técnicos dentro do monorepo.

@@ -12,7 +12,7 @@ This document serves as the bounded context router (Layer 2) for the .agents/ wo
 
 ## Purpose
 
-This directory manages all AI agent behaviors, skills, and user-driven execution plans for Knowledge Lab.
+This directory manages all AI agent behaviors, skills, and user-driven execution plans for Academic Lab.
 
 ## Workspaces
 

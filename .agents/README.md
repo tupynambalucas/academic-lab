@@ -1,6 +1,6 @@
 # Agent Automation and Plans
 
-This directory contains automation logic, custom agent skills, and study plans for Knowledge Lab.
+This directory contains automation logic, custom agent skills, and study plans for Academic Lab.
 
 ## Structure
 

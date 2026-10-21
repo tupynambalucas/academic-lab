@@ -12,7 +12,7 @@ This document serves as the bounded context router (Layer 2) for the config/ wor
 
 ## Purpose
 
-The config workspace acts as the programmatic single source of truth for Knowledge Lab configurations, Prettier formatting rules, and base TypeScript compiler settings.
+The config workspace acts as the programmatic single source of truth for Academic Lab configurations, Prettier formatting rules, and base TypeScript compiler settings.
 
 ## Directory Layout
 
@@ -26,4 +26,4 @@ The config workspace acts as the programmatic single source of truth for Knowled
 
 - MUST keep configuration variables strongly typed and export both named and default objects.
 - MUST NOT add dependencies on other internal monorepo packages.
-- MUST keep all values updated to reflect the author Lucas Tupynambá and Knowledge Lab.
+- MUST keep all values updated to reflect the author Lucas Tupynambá and Academic Lab.

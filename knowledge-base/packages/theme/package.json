@@ -1,8 +1,8 @@
 {
-  "name": "@knowledge-lab/theme",
+  "name": "@academic-lab/theme",
   "version": "1.0.0",
   "private": true,
-  "description": "Custom Docusaurus theme plugin for the Knowledge Lab platform.",
+  "description": "Custom Docusaurus theme plugin for the Academic Lab platform.",
   "exports": {
     ".": {
       "import": "./dist/index.js",
@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "@docusaurus/plugin-content-blog": "catalog:docs-stack",
-    "@knowledge-lab/config": "workspace:*",
+    "@academic-lab/config": "workspace:*",
     "clsx": "catalog:web-stack",
     "tailwindcss": "catalog:shared-stack"
   },

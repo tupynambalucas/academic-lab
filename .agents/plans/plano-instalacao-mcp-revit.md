@@ -52,7 +52,7 @@ flowchart LR
 | **Integração com Antigravity** | Nativa via `uv run` em `.agents/mcp_config.json`            | Requer servidor Node.js/Python intermediário       |
 
 **Decisão**: O servidor `demolinator/revit-mcp-server` é a solução mais recomendada e sustentável
-para o ecossistema do Knowledge Lab, pois utiliza o pyRevit (ferramenta padrão na prática
+para o ecossistema do Academic Lab, pois utiliza o pyRevit (ferramenta padrão na prática
 arquitetônica) e o gerenciador de pacotes ultrarrápido `uv`.
 
 ---

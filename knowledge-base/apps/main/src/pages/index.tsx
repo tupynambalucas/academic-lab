@@ -2,7 +2,7 @@ import React, { type ReactNode } from "react";
 import Layout from "@theme/Layout";
 import Heading from "@theme/Heading";
 import Link from "@docusaurus/Link";
-import projectConfig from "@knowledge-lab/config/project.config";
+import projectConfig from "@academic-lab/config/project.config";
 
 export default function HomePage(): ReactNode {
   return (
