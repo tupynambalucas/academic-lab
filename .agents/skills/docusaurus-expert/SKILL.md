@@ -5,7 +5,7 @@ description: Use this skill to create, analyze, or update technical documentatio
 
 # Docusaurus Docs Expert
 
-This skill defines the authoritative standards, directory structures, design patterns, and validation workflows for the **Lumini Estética** documentation workspace (`docs/`).
+This skill defines the authoritative standards, directory structures, design patterns, and validation workflows for the **@tupynambalucas/knowledge-lab** documentation workspace (`docs/`).
 
 ---
 
@@ -80,7 +80,7 @@ All files placed inside the documentation directories MUST strictly adhere to th
 
 ### F. Explicit Naming & Prohibited Tokens
 
-- **Explicit Project Names**: The project name ("Lumini Estética") and author ("Vitória Rodrigues Ferreira") MUST be written explicitly. The use of generic AST tokens (e.g., `%PROJECT_NAME%`) is strictly forbidden, as per the monorepo rules.
+- **Explicit Project Names**: The project name ("@tupynambalucas/knowledge-lab") and author ("Lucas Tupynambá") MUST be written explicitly. The use of generic AST tokens (e.g., `%PROJECT_NAME%`) is strictly forbidden, as per the monorepo rules.
 
 ---
 
@@ -105,3 +105,11 @@ For the step-by-step validation pipeline instructions, refer to [workflow.md](./
 ## 5. Local Router Context
 
 When operating within the `docs/` workspace, ALWAYS read and adhere to its local bounded context router at `docs/AGENTS.md` (if it exists) to align with specific workspace directives before making changes.
+
+---
+
+## Understanding Project Configurations and Goals
+
+When working in this project, you must align with the current study goals and configurations:
+- **config/src/project.config.ts**: Contains the technical variables of the project, including literal topics of study and documentation config. Use this file to understand the hard configurations.
+- **LEARNING_CONTEXT.md**: Contains the subjective, human-driven goals and short-term study targets. Always refer to this document to understand the underlying motives and adapt your responses to the user's current learning context.

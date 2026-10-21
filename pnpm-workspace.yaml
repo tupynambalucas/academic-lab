@@ -17,9 +17,10 @@ minimumReleaseAgeExclude:
   - '@turbo/windows-arm64'
 
 packages:
-  - 'app'
-  - 'docs'
-  - 'supabase'
+  - 'config'
+  - 'knowledge-base/collections'
+  - 'knowledge-base/packages/*'
+  - 'knowledge-base/apps/*'
 
 allowBuilds:
   '@swc/core': true
@@ -37,7 +38,6 @@ catalog:
   '@types/unist': ^3.0.3
   'unified': ^11.0.5
   '@docusaurus/faster': ^3.10.2
-  'dotenv': ^18.0.4
 
 catalogs:
   tooling-stack:
@@ -62,21 +62,15 @@ catalogs:
     'gsap': ^3.15.0
     'react': ^19.3.0
     'react-dom': ^19.3.0
-    '@vitejs/plugin-react-swc': ^4.3.3
     '@types/react': ^19.3.0
     '@types/react-dom': ^19.3.0
-    'vite': ^8.3.1
     '@eslint-react/eslint-plugin': ^5.20.8
     'eslint-plugin-react-refresh': ^0.5.7
-    '@stripe/react-stripe-js': ^6.8.2
-    '@stripe/stripe-js': ^9.15.0
-    '@supabase/supabase-js': ^2.106.2
-    '@tanstack/react-query': ^5.104.0
-    'react-router-dom': ^7.15.1
-    'react-icons': ^5.7.0
 
   shared-stack:
-    'zod': ^4.6.5
+    'dotenv': ^18.0.4
+    'tailwindcss': ^4.3.3
+    '@tailwindcss/postcss': ^4.3.3
 
   docs-stack:
     '@docusaurus/core': '3.10.2'
@@ -101,5 +95,3 @@ catalogs:
     '@docusaurus/theme-classic': '3.10.2'
     '@docusaurus/theme-search-algolia': '3.10.2'
     '@docusaurus/theme-common': '3.10.2'
-    'tailwindcss': ^4.3.3
-    '@tailwindcss/postcss': ^4.3.3

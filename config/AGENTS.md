@@ -1,29 +1,29 @@
 <context-hierarchy>
-  <parent src="../../AGENTS.md" type="global-rules" />
-  <parent src="../AGENTS.md" type="bounded-context-rules" />
+  <parent src="../AGENTS.md" type="global-rules" />
   <system-instruction>
-    AGENT: If you have not read "../../AGENTS.md" and "../AGENTS.md" in this session, stop now
-    and read both files using your file-reading tools before proceeding. Both global constraints
-    and bounded context rules are mandatory.
+    AGENT: If you have not read "../AGENTS.md" in this session, stop now and read it using your
+    file-reading tools before proceeding. Global constraints are mandatory.
   </system-instruction>
 </context-hierarchy>
 
-# Local Context: Shared Config
+# Configuration Workspace Context
 
-This workspace ([config/](./)) contains global configuration, TypeScript base configurations, and formatting rules. Read [../AGENTS.md](../AGENTS.md) for the parent bounded context rules before operating here.
+This document serves as the bounded context router (Layer 2) for the config/ workspace.
 
----
+## Purpose
 
-## 1. Directory Layout
+The config workspace acts as the programmatic single source of truth for Knowledge Lab configurations, Prettier formatting rules, and base TypeScript compiler settings.
 
-- **[project.config.json](./project.config.json)**: Single source of truth for project domains and repo paths.
-- **[prettierrc.json](./prettierrc.json)**: Global Prettier formatting rules.
-- **[.prettierignore](./.prettierignore)**: Global formatting exclusions.
-- **[tsconfig.base.json](./tsconfig.base.json)**: Base TypeScript compilation configuration.
+## Directory Layout
 
----
+- [src/project.config.ts](./src/project.config.ts): Programmatic source of truth for project metadata, researcher name, and site variables.
+- [src/prettierrc.json](./src/prettierrc.json): Monorepo-wide code formatting standards.
+- [src/.prettierignore](./src/.prettierignore): Exclusions for automated code formatting.
+- [src/tsconfig.base.json](./src/tsconfig.base.json): Shared TypeScript configuration inherited by all workspaces.
+- [package.json](./package.json): Package manifest exporting configuration paths.
 
-## 2. Coding Guardrails
+## Scoped Guardrails
 
-- MUST maintain configuration files as pure JSON without dynamic logic.
-- MUST NOT introduce dependencies on other monorepo packages.
+- MUST keep configuration variables strongly typed and export both named and default objects.
+- MUST NOT add dependencies on other internal monorepo packages.
+- MUST keep all values updated to reflect the author Lucas Tupynambá and Knowledge Lab.

@@ -50,7 +50,7 @@ For complete frontmatter details, read [specification.md](./references/specifica
 
 ---
 
-## 3. Progressive Disclosure Architecture
+## 3. Progressive Disclosure architecture
 
 To prevent context window bloat, Antigravity loads skills through a 3-stage progressive disclosure
 model:
@@ -165,3 +165,11 @@ npx tsx .agents/skills/skill-expert/scripts/validate-skill.ts --path .agents/ski
 
 Verify that the command exits with code `0`. Fix any flagged issues before declaring the task
 complete.
+
+---
+
+## Understanding Project Configurations and Goals
+
+When working in this project, you must align with the current study goals and configurations:
+- **config/src/project.config.ts**: Contains the technical variables of the project, including literal topics of study and documentation config. Use this file to understand the hard configurations.
+- **LEARNING_CONTEXT.md**: Contains the subjective, human-driven goals and short-term study targets. Always refer to this document to understand the underlying motives and adapt your responses to the user's current learning context.

@@ -3,16 +3,64 @@
   "tasks": [
     {
       "label": "Antigravity CLI",
-      "type": "shell",
-      "command": "agy",
-      "options": {
-        "cwd": "${workspaceFolder}"
+      "type": "process",
+      "command": "pwsh.exe",
+      "windows": {
+        "command": "pwsh.exe",
+        "args": [
+          "-WindowStyle",
+          "Hidden",
+          "-Command",
+          "Start-Process cmd.exe -ArgumentList '/c start wt.exe --window -1 --profile \"Antigravity\" -d \"${workspaceFolder}\" -- pwsh.exe -NoExit -ExecutionPolicy Bypass -File \"${workspaceFolder}\\.vscode\\scripts\\launch-agy.ps1\"'"
+        ]
+      },
+      "linux": {
+        "command": "bash",
+        "args": ["-c", "if command -v agy >/dev/null 2>&1; then agy; else pnpm agy; fi"],
+        "presentation": {
+          "reveal": "always",
+          "panel": "new"
+        }
       },
       "problemMatcher": [],
       "presentation": {
-        "reveal": "always",
-        "panel": "new",
-        "focus": true
+        "echo": false,
+        "reveal": "never",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": false,
+        "close": true
+      }
+    },
+    {
+      "label": "Admin CLI",
+      "type": "process",
+      "command": "pwsh.exe",
+      "windows": {
+        "command": "pwsh.exe",
+        "args": [
+          "-WindowStyle",
+          "Hidden",
+          "-Command",
+          "Start-Process cmd.exe -Verb RunAs -ArgumentList '/c start wt.exe --window -1 --profile \"Admin\" -d \"${workspaceFolder}\" -- pwsh.exe -NoExit -ExecutionPolicy Bypass -File \"${workspaceFolder}\\.vscode\\scripts\\launch-mage.ps1\"'"
+        ]
+      },
+      "linux": {
+        "command": "bash",
+        "args": ["-c", "clear; echo 'Admin shell ready.'; exec bash"],
+        "presentation": {
+          "reveal": "always",
+          "panel": "new"
+        }
+      },
+      "problemMatcher": [],
+      "presentation": {
+        "echo": false,
+        "reveal": "never",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": false,
+        "close": true
       }
     }
   ]

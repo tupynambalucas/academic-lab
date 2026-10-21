@@ -1,0 +1,14 @@
+{
+  "extends": "@docusaurus/tsconfig",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@knowledge-lab/preset": ["../../packages/preset/src/index.ts"],
+      "@knowledge-lab/preset/*": ["../../packages/preset/src/*"],
+      "@knowledge-lab/theme": ["../../packages/theme/src/index.ts"],
+      "@knowledge-lab/theme/*": ["../../packages/theme/src/*"]
+    },
+    "ignoreDeprecations": "6.0"
+  },
+  "include": ["src", "docusaurus.config.ts"]
+}

@@ -1,35 +1,21 @@
-# @monorepo/kb-collections
+# Collections Workspace
 
-Decoupled content repository and translation configuration for the %PROJECT_DOMAIN% knowledge base.
+The `@knowledge-lab/collections` package serves as the modular repository for documentation and blog collections within Knowledge Lab.
 
-This workspace houses all markdown and MDX content structured by Feature-Sliced Design (FSD) namespaces, along with the decoupled translation architecture managed by the Crowdin GitHub App.
+## Overview
 
----
+This workspace isolates academic and educational content from website runtime code. Collections can be configured independently and imported dynamically into any Docusaurus application inside apps/.
 
-## Directory Architecture
+## Structure
 
-- **[namespaces/portal/content/](./namespaces/portal/content/)**: Source documentation content for the portal service.
-  - **[docs/](./namespaces/portal/content/docs/)**: Technical documentation structured under the Diátaxis framework (`tutorials/`, `guides/`, `reference/`, `explanation/`).
-  - **[community/](./namespaces/portal/content/community/)**: Community guides, resources, maintainer profiles, contributing workflows, and workspace roadmaps.
-  - **[blog/](./namespaces/portal/content/blog/)**: Engineering blog posts, version releases (`releases/`), author definitions (`authors.yml`), and tags taxonomy (`tags.yml`).
-- **[namespaces/portal/locales/](./namespaces/portal/locales/)**: Target destination for L10n translation files (`pt-BR`, etc.) synced via GitHub App.
+- [docs/](./docs/): Documentation collections organized by topic.
+  - [docs/docs-template/](./docs/docs-template/): Base documentation template structured around the Diátaxis framework (explanation/, guides/, reference/, tutorials/).
+  - [docs/community-template/](./docs/community-template/): Community roadmap and ecosystem notes.
+- [blogs/](./blogs/): Chronological and technical blog collections.
+  - [blogs/blog-template/](./blogs/blog-template/): Blog template including author and tag definitions.
 
----
+## Authoring Standards
 
-## Content Guidelines
-
-1. **Diátaxis Compliance**: All architectural and developer guides in `docs/` MUST be classified into one of the four quadrants: Tutorials, How-To Guides, Reference, or Explanation.
-2. **Blog Truncation Markers**: Every blog post and release announcement MUST contain the `{/* truncate */}` marker and reference registered author IDs from `authors.yml`.
-3. **AST Agnostic Tokens**: Authors MUST NOT hardcode domain or project names; use `%PROJECT_DOMAIN%` and `%PROJECT_NAME%` tokens.
-4. **Translation Isolation**: Files in `locales/` are managed programmatically by the Crowdin GitHub App. Do not edit them directly.
-
----
-
-## Operations & Scripts
-
-Run commands from the monorepo root:
-
-```bash
-# Lint collection configurations and JSON files
-pnpm kb:collections:lint
-```
+1. **Extension Policy**: All content files must use the .mdx extension.
+2. **Language Standard**: All academic content is written natively in Brazilian Portuguese (pt-BR).
+3. **Template Integrity**: Keep base templates clean with overview.mdx, intro.mdx, and _category_.json files.

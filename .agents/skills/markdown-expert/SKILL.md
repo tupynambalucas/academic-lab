@@ -13,7 +13,7 @@ The following rules apply to all documentation tasks, regardless of file extensi
 
 ### A. Tone of Voice
 
-- Maintain a highly didactic, clear, and encouraging educational tone. The primary reader is an architect focused on learning, not a software developer.
+- Maintain a highly didactic, clear, and encouraging educational tone. The primary reader is an student/researcher focused on learning, not a software developer.
 - Explain concepts thoroughly when writing plans or documentation. Break down complex steps so they are easy to study.
 - Keep the structure clean and direct, avoiding robotic chatter but remaining welcoming and instructive.
 
@@ -49,9 +49,9 @@ The following rules apply to all documentation tasks, regardless of file extensi
   1. Standard relative paths (e.g., `./relative-file.md` or `../sibling/file.md`).
   2. Fully-qualified public web URLs with explicit domains (e.g., `https://example.com` or external domain references).
 
-### H. Project Variables (Atualizado para Lumini Estética)
+### H. Project Variables (Atualizado para @tupynambalucas/knowledge-lab)
 
-- **Contexto Central**: O projeto atual é o **Lumini Estética**, de autoria de **Vitória Rodrigues Ferreira**.
+- **Contexto Central**: O projeto atual é o **@tupynambalucas/knowledge-lab**, de autoria de **Lucas Tupynambá**.
 - **Regra de Nomenclatura**: O nome do projeto e da autora DEVEM ser utilizados explicitamente em todos os arquivos Markdown. Fica estritamente proibido o uso de variáveis genéricas, placeholders ou tokens de AST (como `%PROJECT_DOMAIN%` ou `%PROJECT_NAME%`).
 - **Configuração**: Esta abordagem direta substitui a antiga configuração centralizada (`@monorepo/shared-config...`), mantendo a clareza e autoria evidentes na documentação.
 
@@ -75,3 +75,11 @@ Use these guidelines when creating, updating, or analyzing general repository do
 Before completing any documentation task, you must execute the verification steps defined in the workflow guide:
 
 - Follow the validation steps in [workflow.md](./references/workflow.md).
+
+---
+
+## Understanding Project Configurations and Goals
+
+When working in this project, you must align with the current study goals and configurations:
+- **config/src/project.config.ts**: Contains the technical variables of the project, including literal topics of study and documentation config. Use this file to understand the hard configurations.
+- **LEARNING_CONTEXT.md**: Contains the subjective, human-driven goals and short-term study targets. Always refer to this document to understand the underlying motives and adapt your responses to the user's current learning context.

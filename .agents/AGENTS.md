@@ -1,12 +1,14 @@
-<context-hierarchy src="../AGENTS.md">
+<context-hierarchy>
+  <parent src="../AGENTS.md" type="global-rules" />
   <system-instruction>
-    Stop now and read the parent context file before proceeding with any actions in this directory.
+    AGENT: If you have not read "../AGENTS.md" in this session, stop now and read it using your
+    file-reading tools before proceeding. Global constraints are mandatory.
   </system-instruction>
 </context-hierarchy>
 
-# Agents & Automation Context
+# Agents and Automation Context
 
-This document serves as the bounded context router (Layer 2) for the `.agents/` workspace.
+This document serves as the bounded context router (Layer 2) for the .agents/ workspace.
 
 ## Purpose
 
@@ -14,10 +16,12 @@ This directory manages all AI agent behaviors, skills, and user-driven execution
 
 ## Workspaces
 
-- [skills](./skills/): Contains all custom agent skills, formatted according to the `skill-expert` guidelines.
-- [plans](./plans/): Directory dedicated to study and execution plans authored by the user.
+- [skills/](./skills/): Contains all custom agent skills formatted according to skill-expert guidelines.
+- [plans/](./plans/): Directory dedicated to study and execution plans authored by the user.
 
 ## Guidelines
 
-- Agents MUST strictly follow the directives in `skills/` when performing tasks.
-- The `plans/` directory is the primary source of truth for upcoming study goals and architectural milestones.
+- Agents MUST strictly follow the directives in skills/ when performing tasks.
+- The plans/ directory is the primary source of truth for upcoming study goals and academic milestones.
+- Agents MUST read config/src/project.config.ts to retrieve technical study variables.
+- Agents MUST read LEARNING_CONTEXT.md in the root to grasp the user's current subjective goals.

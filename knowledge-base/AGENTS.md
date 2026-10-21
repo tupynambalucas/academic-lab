@@ -6,19 +6,33 @@
   </system-instruction>
 </context-hierarchy>
 
-# Bounded Context: Knowledge Base
+# Knowledge Base Workspace Context
 
-This bounded context orchestrates the developer knowledge base, centralizing both the agnostic markdown documentation and the Docusaurus ecosystem for the %PROJECT_DOMAIN% monorepo.
+This document serves as the bounded context router (Layer 2) for the knowledge-base/ workspace.
 
----
+## Purpose
 
-## 1. Local Architecture
+The knowledge-base bounded context coordinates dynamic documentation and blog collections, custom Docusaurus extensions, and portal applications for Knowledge Lab.
 
-- [collections/](./collections/AGENTS.md): Sub-domain containing content collections, namespace documentation, and Crowdin configuration.
-- [docusaurus/](./docusaurus/AGENTS.md): Sub-domain containing the Docusaurus build engine, presets, themes, and portal service.
+## Directory Layout
 
----
+- [collections/](./collections/AGENTS.md): Content source for modular documentation and blog collections.
+- [packages/](./packages/): Shared extensions and styling libraries.
+  - [preset/](./packages/preset/AGENTS.md): Custom preset dynamically resolving collections.
+  - [theme/](./packages/theme/AGENTS.md): Custom Docusaurus theme and Infima design tokens.
+- [apps/](./apps/): Docusaurus website applications.
+  - [main/](./apps/main/AGENTS.md): Primary Docusaurus documentation portal.
 
-## 2. Required Skill
+## Scoped Guardrails
 
-When creating, updating, or reviewing any `.mdx` or `.md` file within the documentation workspaces, agents MUST activate the `docusaurus-expert` skill by name before beginning.
+- MUST write all documentation content inside collections/ in Portuguese (pt-BR).
+- MUST keep all AGENTS.md and README.md files in English (en-US).
+- MUST maintain zero placeholders and zero emojis across all documents.
+- MUST use relative links for all internal file references.
+
+## Required Skills
+
+When authoring documentation or modifying Docusaurus configurations in this bounded context, agents MUST activate the appropriate skill by name:
+
+- **docusaurus-expert**: For Docusaurus site configuration, plugins, themes, and MDX structure.
+- **markdown-expert**: For markdown documentation, README files, and agent context files.

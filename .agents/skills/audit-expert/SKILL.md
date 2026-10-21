@@ -43,3 +43,11 @@ This skill establishes the authoritative guidelines, tone, and preservation rule
 For step-by-step instructions on evaluating and applying updates to the audit document safely, you MUST read the execution loop in [workflow.md](./references/workflow.md).
 
 - **Version Control Mandate**: Every time `AUDITORIA.md` is updated, you MUST immediately execute `git add AUDITORIA.md`, `git commit -m "docs(audit): update..."` and `git push` to the repository. This ensures a secure change history.
+
+---
+
+## Understanding Project Configurations and Goals
+
+When working in this project, you must align with the current study goals and configurations:
+- **config/src/project.config.ts**: Contains the technical variables of the project, including literal topics of study and documentation config. Use this file to understand the hard configurations.
+- **LEARNING_CONTEXT.md**: Contains the subjective, human-driven goals and short-term study targets. Always refer to this document to understand the underlying motives and adapt your responses to the user's current learning context.

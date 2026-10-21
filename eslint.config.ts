@@ -4,9 +4,6 @@ import { fileURLToPath } from 'node:url';
 import eslint from '@eslint/js';
 import { defineConfig } from 'eslint/config';
 import eslintPluginImportX from 'eslint-plugin-import-x';
-// import eslintReact from '@eslint-react/eslint-plugin';
-import reactRefreshPlugin from 'eslint-plugin-react-refresh';
-import reactHooksPlugin from 'eslint-plugin-react-hooks';
 import tseslint from 'typescript-eslint';
 import eslintPluginPrettier from 'eslint-plugin-prettier';
 import eslintConfigPrettier from 'eslint-config-prettier';
@@ -48,7 +45,7 @@ export default defineConfig([
       'import-x/resolver': {
         typescript: {
           alwaysTryTypes: true,
-          project: ['tsconfig.json', 'app/tsconfig.json', 'docs/tsconfig.json'],
+          project: ['tsconfig.json', 'knowledge-base/tsconfig.json'],
         },
         node: {
           extensions: ['.js', '.jsx', '.ts', '.tsx'],
@@ -70,7 +67,6 @@ export default defineConfig([
     // Elas forçam tratamentos de erros mais restritos (como em Promessas flutuantes)
     // e banem o uso inseguro de retornos não tipados.
     // Para adotar, basta descomentar as regras quando a equipe se sentir confortável.
-    /*
     rules: {
       '@typescript-eslint/no-explicit-any': 'error',
       '@typescript-eslint/no-unsafe-assignment': 'error',
@@ -127,7 +123,6 @@ export default defineConfig([
       'import-x/first': 'off',
       'import-x/no-default-export': 'off',
     }
-    */
   },
 
   {
@@ -157,59 +152,9 @@ export default defineConfig([
     },
   },
 
-  // CONFIGURAÇÃO ATIVA DO APP (Vinda de app/eslint.config.js)
-  {
-    name: 'monorepo/app-active',
-    files: ['app/**/*.{ts,tsx}'],
-    plugins: {
-      'react-hooks': reactHooksPlugin as Record<string, unknown>,
-      'react-refresh': reactRefreshPlugin,
-    },
-    languageOptions: {
-      globals: {
-        ...globals.browser,
-      },
-    },
-    rules: {
-      // Regras que estariam no extends
-      ...(reactHooksPlugin.configs.recommended.rules as Record<string, unknown>),
-      'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
-    },
-  },
-
-  // ============================================================================
-  // REGRAS EMPRESARIAIS PARA O APP (SUGESTÃO FUTURA PARA PRODUÇÃO)
-  // ============================================================================
-  // Quando o projeto começar a crescer e receber muitos usuários em produção,
-  // habilitar este bloco garantirá uma maior estabilidade.
-  //
-  // Por que essas regras são importantes em produção?
-  // 1. @eslint-react/strict-type-checked: Impede falhas silenciosas de renderização do React
-  //    garantindo que os componentes recebam exatamente os tipos que esperam.
-  // 2. strict-boolean-expressions: Evita bugs difíceis de achar com valores "falsy" (ex: renderizar um 0 acidental na tela).
-  // 3. no-console: Garante que não vazem logs de debug para o navegador do usuário, protegendo a segurança e performance.
-  //
-  // Como usar: Quando sentir que o código está maduro, basta descomentar o bloco abaixo.
-  //
-  // {
-  //   name: 'monorepo/app',
-  //   files: ['app/**/*.{ts,tsx}'],
-  //   ignores: ['**/*.md/**', '**/*.mdx/**'],
-  //   plugins: {
-  //     '@eslint-react': eslintReact,
-  //     'react-refresh': reactRefreshPlugin,
-  //   },
-  //   rules: {
-  //     ...eslintReact.configs['strict-type-checked'].rules,
-  //     'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
-  //     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'warn',
-  //     '@typescript-eslint/strict-boolean-expressions': 'error',
-  //   },
-  // },
-
   {
     name: 'monorepo/docs-workspace',
-    files: ['docs/**/*.{ts,tsx,js,jsx}'],
+    files: ['knowledge-base/**/*.{ts,tsx,js,jsx}'],
     plugins: {
       '@docusaurus': eslintPluginDocusaurus as Record<string, unknown>,
     },
@@ -295,7 +240,6 @@ export default defineConfig([
       '**/*.less',
       '**/*.styl',
       'supabase/**',
-      'app/src/**',
       'docker-compose*.yaml',
       '**/types/**/*.d.ts',
       '**/*.d.ts',
@@ -309,7 +253,6 @@ export default defineConfig([
 
   {
     name: 'monorepo/prettier',
-    ignores: ['app/**'],
     plugins: {
       prettier: eslintPluginPrettier,
     },

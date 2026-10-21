@@ -13,7 +13,7 @@ The following rules apply to all documentation tasks, regardless of file extensi
 
 ### A. Tone of Voice
 
-- Maintain a highly didactic, clear, and encouraging educational tone. The primary reader is an architect focused on learning, not a software developer.
+- Maintain a highly didactic, clear, and encouraging educational tone. The primary reader is an student/researcher focused on learning, not a software developer.
 - Explain concepts thoroughly when writing plans or documentation. Break down complex steps so they are easy to study.
 - Keep the structure clean and direct, avoiding robotic chatter but remaining welcoming and instructive.
 
@@ -42,9 +42,9 @@ The following rules apply to all documentation tasks, regardless of file extensi
 
 - All files must comply with the root Prettier formatting rules (2-space indentation, max 100-character line width, hyphen-based unordered lists, and proper JavaScript/TypeScript code block styling).
 
-### G. Project Variables (Atualizado para Lumini Estética)
+### G. Project Variables (Atualizado para @tupynambalucas/knowledge-lab)
 
-- **Contexto Central**: O projeto atual é o **Lumini Estética**, de autoria de **Vitória Rodrigues Ferreira**.
+- **Contexto Central**: O projeto atual é o **@tupynambalucas/knowledge-lab**, de autoria de **Lucas Tupynambá**.
 - **Regra de Nomenclatura**: O nome do projeto e da autora DEVEM ser utilizados explicitamente na documentação e arquivos `AGENTS.md`. Fica estritamente proibido o uso de variáveis genéricas, placeholders ou tokens de AST (como `%PROJECT_DOMAIN%` ou `%PROJECT_NAME%`).
 - **Configuração**: Esta abordagem direta substitui a antiga configuração centralizada (`@monorepo/shared-config...`), simplificando a identificação do projeto.
 
@@ -150,3 +150,11 @@ When an `AGENTS.md` file governs a workspace where agents perform documentation 
 Before completing any documentation task, you must execute the verification steps defined in the workflow guide:
 
 - Follow the verification and audit steps in [workflow.md](./references/workflow.md).
+
+---
+
+## Understanding Project Configurations and Goals
+
+When working in this project, you must align with the current study goals and configurations:
+- **config/src/project.config.ts**: Contains the technical variables of the project, including literal topics of study and documentation config. Use this file to understand the hard configurations.
+- **LEARNING_CONTEXT.md**: Contains the subjective, human-driven goals and short-term study targets. Always refer to this document to understand the underlying motives and adapt your responses to the user's current learning context.
