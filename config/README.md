@@ -18,5 +18,5 @@ This workspace isolates project configuration from application runtime code, ens
 Other workspaces consume these configurations via workspace dependencies:
 
 ```typescript
-import projectConfig from '@academic-lab/config/project.config';
+import projectConfig from "@academic-lab/config/project.config";
 ```

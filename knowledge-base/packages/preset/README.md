@@ -14,24 +14,24 @@ The `@academic-lab/preset` package is a custom Docusaurus preset providing dynam
 In any Docusaurus application's `docusaurus.config.ts`:
 
 ```typescript
-import type { MonorepoPresetOptions } from '@academic-lab/preset/options';
+import type { MonorepoPresetOptions } from "@academic-lab/preset/options";
 
 // Inside docusaurus.config.ts
 presets: [
   [
-    require.resolve('@academic-lab/preset'),
+    require.resolve("@academic-lab/preset"),
     {
       docs: [
         {
-          id: 'default',
-          collection: 'docs-template',
-          routeBasePath: 'docs',
-          sidebarPath: require.resolve('@academic-lab/preset/sidebars'),
+          id: "default",
+          collection: "docs-template",
+          routeBasePath: "docs",
+          sidebarPath: require.resolve("@academic-lab/preset/sidebars"),
         },
       ],
       blog: {
-        collection: 'blog-template',
-        routeBasePath: 'blog',
+        collection: "blog-template",
+        routeBasePath: "blog",
       },
     } satisfies MonorepoPresetOptions,
   ],

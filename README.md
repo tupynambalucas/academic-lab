@@ -13,9 +13,9 @@ This repository is designed to serve as a comprehensive learning and reference e
   - [packages/preset](./knowledge-base/packages/preset/README.md): Custom Docusaurus preset for dynamic collection orchestration.
   - [packages/theme](./knowledge-base/packages/theme/README.md): Custom Docusaurus theme and stylesheet.
   - [apps/main](./knowledge-base/apps/main/README.md): Main documentation portal application.
-- [config](./config/README.md): Contains project.config.ts for technical configurations.
+- [config](./config/README.md): Contains [project.config.ts](./config/src/project.config.ts) for technical configurations.
 - [LEARNING_CONTEXT.md](./LEARNING_CONTEXT.md): Contains the subjective goals and focus of the current study.
-- [.agents](./.agents/README.md): Contains agent skills, automated workflows, and execution plans.
+- [.agents](./.agents/README.md): Contains agent skills, automated workflows, plugins, and execution plans.
 
 ## Getting Started
 

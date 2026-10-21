@@ -22,8 +22,9 @@ This document serves as the root context router (Layer 1) for AI agents operatin
   - [apps/main](./knowledge-base/apps/main/AGENTS.md): Main Docusaurus portal application.
 - [config](./config/AGENTS.md): Project configuration workspace. The file [project.config.ts](./config/src/project.config.ts) acts as the programmatic source of truth for the user's hardcoded study topics, name, and website variables. Always read it to know what topics the user is formally studying.
 - [LEARNING_CONTEXT.md](./LEARNING_CONTEXT.md): Subjective study goals and focus. Read this to understand the human's current academic journey and broader objectives.
-- [.agents](./.agents/AGENTS.md): Automation, skills, and planning workspace.
+- [.agents](./.agents/AGENTS.md): Automation, skills, plugins, and planning workspace.
   - [plans](./.agents/plans/): Directory dedicated to user-created execution and study plans.
+  - [plugins](./.agents/plugins/): Directory dedicated to workspace plugins and MCP tool definitions.
 
 ## Global Constraints
 
@@ -41,5 +42,6 @@ When performing documentation tasks in this project, agents MUST activate the ap
 
 - **agent-router-expert**: MUST be active when creating, updating, or reviewing any AGENTS.md file anywhere in the repository. Defines the 3-layer context hierarchy standard, context-hierarchy directive syntax, line budgets, and validation workflow.
 - **markdown-expert**: MUST be active when creating, updating, or reviewing any README.md, .md skill file, or general Markdown document across the repository.
-- **mdx-docs-expert**: MUST be active when extracting, creating, updating, or reviewing academic documentation in MDX format inside knowledge-base/. Governs the Diátaxis framework, Portuguese (pt-BR) language standards, and MDX component syntax.
-- **skill-expert**: MUST be active when managing custom Agent Skills.
+- **docusaurus-expert**: MUST be active when extracting, creating, updating, or reviewing academic documentation in MDX format inside knowledge-base/ or configuring Docusaurus packages. Governs the Diátaxis framework, Portuguese (pt-BR) language standards, and MDX component syntax.
+- **plugin-expert**: MUST be active when creating, structuring, or updating Antigravity plugins under .agents/plugins/.
+- **skill-expert**: MUST be active when managing custom Agent Skills under .agents/skills/.

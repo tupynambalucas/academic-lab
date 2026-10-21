@@ -9,7 +9,7 @@ portal:
 monorepo:
   description: "Monorepo tooling, pnpm workspaces, and build orchestration"
 ai:
-  description: "AI agent workflows, Cortex Gateway, and automation"
+  description: "AI agent workflows, research tooling, and academic automation"
 core:
   description: "Core libraries, shared packages, and foundational utilities"
 instance:
