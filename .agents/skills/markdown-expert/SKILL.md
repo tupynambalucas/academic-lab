@@ -13,15 +13,14 @@ The following rules apply to all documentation tasks, regardless of file extensi
 
 ### A. Tone of Voice
 
-- Maintain a highly didactic, clear, and encouraging educational tone. The primary reader is an student/researcher focused on learning, not a software developer.
-- Explain concepts thoroughly when writing plans or documentation. Break down complex steps so they are easy to study.
-- Keep the structure clean and direct, avoiding robotic chatter but remaining welcoming and instructive.
+- Maintain a senior, objective, and technical tone.
+- Avoid preambles, introductory chatter, or conclusion summaries.
+- Keep sentences concise, clear, and direct.
 
-### B. Bilingual Language Policy
+### B. Strict English-First
 
-- All router files (`AGENTS.md`) and package/directory headers (`README.md`) MUST be written in English (en-US).
-- All technical documentation, extracted knowledge, and architectural briefs (especially within `docs/`) MUST be written in Portuguese (pt-BR).
-- All execution and study plans (especially within `.agents/plans/`) MUST be written in Portuguese (pt-BR).
+- All code, configuration, technical documentation, READMEs, architectural briefs, code comments/examples, commit messages, and pull request descriptions MUST be written in English (en-US).
+- Conversational chat responses with the user MUST be conducted in Brazilian Portuguese (pt-BR).
 
 ### C. Zero Emojis
 
@@ -49,11 +48,10 @@ The following rules apply to all documentation tasks, regardless of file extensi
   1. Standard relative paths (e.g., `./relative-file.md` or `../sibling/file.md`).
   2. Fully-qualified public web URLs with explicit domains (e.g., `https://example.com` or external domain references).
 
-### H. Project Variables (Atualizado para @tupynambalucas/academic-lab)
+### H. Project Variables and Identifiers
 
-- **Contexto Central**: O projeto atual é o **@tupynambalucas/academic-lab**, de autoria de **Lucas Tupynambá**.
-- **Regra de Nomenclatura**: O nome do projeto e da autora DEVEM ser utilizados explicitamente em todos os arquivos Markdown. Fica estritamente proibido o uso de variáveis genéricas, placeholders ou tokens de AST (como `%PROJECT_DOMAIN%` ou `%PROJECT_NAME%`).
-- **Configuração**: Esta abordagem direta substitui a antiga configuração centralizada (`@monorepo/shared-config...`), mantendo a clareza e autoria evidentes na documentação.
+- **Concrete Names Required**: Project names, package identifiers, and domains MUST use their actual concrete values corresponding to the target repository in all general `.md` files.
+- **No Unresolved Placeholder Tokens**: Do NOT leave unresolved placeholder tokens (such as `%PROJECT_DOMAIN%` or generic `<PLACEHOLDER>`) in production documentation files unless the workspace explicitly uses an AST template compilation pipeline.
 
 ---
 
@@ -64,9 +62,9 @@ Use these guidelines when creating, updating, or analyzing general repository do
 - **Syntax Standard**: Must adhere to standard GitHub Flavored Markdown (GFM).
 - **GFM Callouts**: Use GFM blockquote alerts (`> [!NOTE]`, `> [!TIP]`, `> [!IMPORTANT]`, `> [!WARNING]`, `> [!CAUTION]`) for admonitions.
 - **Reference Files**:
-  - GFM syntax and formatting: [syntax.md](./references/syntax.md)
-  - Code examples and GitHub patterns: [patterns.md](./references/patterns.md)
-  - Validation and verification workflow: [workflow.md](./references/workflow.md)
+  - GFM syntax and formatting: [references/syntax.md](references/syntax.md)
+  - Code examples and GitHub patterns: [references/patterns.md](references/patterns.md)
+  - Validation and verification workflow: [references/workflow.md](references/workflow.md)
 
 ---
 
@@ -74,12 +72,4 @@ Use these guidelines when creating, updating, or analyzing general repository do
 
 Before completing any documentation task, you must execute the verification steps defined in the workflow guide:
 
-- Follow the validation steps in [workflow.md](./references/workflow.md).
-
----
-
-## Understanding Project Configurations and Goals
-
-When working in this project, you must align with the current study goals and configurations:
-- **config/src/project.config.ts**: Contains the technical variables of the project, including literal topics of study and documentation config. Use this file to understand the hard configurations.
-- **LEARNING_CONTEXT.md**: Contains the subjective, human-driven goals and short-term study targets. Always refer to this document to understand the underlying motives and adapt your responses to the user's current learning context.
+- Follow the validation steps in [references/workflow.md](references/workflow.md).

@@ -123,7 +123,7 @@ The optional `license` field:
 - Specifies the license applied to the skill
 - We recommend keeping it short (either the name of a license or the name of a bundled license file)
 
-<Card>**Example:** ```yaml license: Proprietary. LICENSE.txt has complete terms ```</Card>
+<Card>**Example:** `yaml license: Proprietary. LICENSE.txt has complete terms `</Card>
 
 #### `compatibility` field
 
@@ -149,7 +149,7 @@ The optional `metadata` field:
 - Clients can use this to store additional properties not defined by the Agent Skills spec
 - We recommend making your key names reasonably unique to avoid accidental conflicts
 
-<Card>**Example:** ```yaml metadata: author: example-org version: "1.0" ```</Card>
+<Card>**Example:** `yaml metadata: author: example-org version: "1.0" `</Card>
 
 #### `allowed-tools` field
 
@@ -158,7 +158,7 @@ The optional `allowed-tools` field:
 - A space-separated string of tools that are pre-approved to run
 - Experimental. Support for this field may vary between agent implementations
 
-<Card>**Example:** ```yaml allowed-tools: Bash(git:*) Bash(jq:*) Read ```</Card>
+<Card>**Example:** `yaml allowed-tools: Bash(git:*) Bash(jq:*) Read `</Card>
 
 ### Body content
 

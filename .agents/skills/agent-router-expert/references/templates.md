@@ -28,7 +28,7 @@ monorepo. Read this file before operating in any bounded context.
 - [studio](./studio/AGENTS.md): Brand identity and design infrastructure...
 - [hub](./hub/AGENTS.md): Developer website client, REST API, and data core.
 - [renderer](./renderer/AGENTS.md): Dynamic asset generator and profile compiler.
-- [docs](./docs/AGENTS.md): MDX architectural knowledge base.
+- [docs](./docs/AGENTS.md): Docusaurus v3 knowledge base.
 - [tools](./tools/AGENTS.md): GitHub CLI automation and provisioning scripts.
 
 ## Technology Stack
@@ -49,8 +49,9 @@ The monorepo uses Skaffold v4beta11 with three composable modules:
 
 ## Global Constraints
 
-- MUST write all documentation in English (en-US).
-- MUST NOT use emojis in any technical document, README, or skill file.
+- MUST conduct all conversational chat responses in Brazilian Portuguese (pt-BR).
+- MUST write all code, configuration, technical documentation, commit messages, and Markdown files in English (en-US).
+- MUST NOT use emojis in any conversational response, chat message, technical document, README, or skill file.
 - MUST NOT use placeholders (e.g., TODO, TBD).
 - MUST use relative paths for all Markdown links. Absolute filesystem paths are strictly forbidden.
 - MUST format all files according to Prettier standards.

@@ -35,17 +35,17 @@ When an existing package already does what you need, you can reference it direct
     - A mature alternative to `uvx`. While `uvx` has become the standard recommendation, `pipx` remains a reliable option with broader OS package manager availability.
 
   </Tab>
-  <Tab title="npx">
-    [npx](https://docs.npmjs.com/cli/commands/npx) runs npm packages, downloading them on demand. It ships with npm (which ships with Node.js).
+  <Tab title="pnpm dlx">
+    [pnpm dlx](https://pnpm.io/cli/dlx) runs npm packages, downloading them on demand. It ships with pnpm.
 
     ```bash
-    npx eslint@9 --fix .
-    npx create-vite@6 my-app
+    pnpm dlx eslint@9 --fix .
+    pnpm dlx create-vite@6 my-app
     ```
 
-    - Bundled with Node.js — no extra install needed.
+    - Requires pnpm to be installed.
     - Downloads the package, runs it, and caches it for future use.
-    - Pin versions with `npx package@version` for reproducibility.
+    - Pin versions with `pnpm dlx package@version` for reproducibility.
 
   </Tab>
   <Tab title="bunx">
@@ -56,7 +56,7 @@ When an existing package already does what you need, you can reference it direct
     bunx create-vite@6 my-app
     ```
 
-    - Drop-in replacement for `npx` in Bun-based environments.
+    - Drop-in replacement for `pnpm dlx` in Bun-based environments.
     - Only appropriate when the user's environment has Bun rather than Node.js.
 
   </Tab>
@@ -88,8 +88,8 @@ When an existing package already does what you need, you can reference it direct
 
 **Tips for one-off commands in skills:**
 
-- **Pin versions** (e.g., `npx eslint@9.0.0`) so the command behaves the same over time.
-- **State prerequisites** in your `SKILL.md` (e.g., "Requires Node.js 18+") rather than assuming the agent's environment has them. For runtime-level requirements, use the [`compatibility` frontmatter field](/specification#compatibility-field).
+- **Pin versions** (e.g., `pnpm dlx eslint@9.0.0`) so the command behaves the same over time.
+- **State prerequisites** in your `SKILL.md` (e.g., "Requires Node.js 18+") rather than assuming the agent's environment has them. For runtime-level requirements, use the [`compatibility` frontmatter field](./specification.md#compatibility-field).
 - **Move complex commands into scripts.** A one-off command works well when you're invoking a tool with a few flags. When a command grows complex enough that it's hard to get right on the first try, a tested script in `scripts/` is more reliable.
 
 ## Referencing scripts from `SKILL.md`

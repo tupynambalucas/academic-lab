@@ -22,7 +22,7 @@ const ALLOWED_FIELDS = new Set([
 
 function printUsage(): void {
   console.log(
-    'Usage: npx tsx .agents/skills/skill-expert/scripts/validate-skill.ts --path <skill-directory>',
+    'Usage: pnpm dlx tsx .agents/skills/skill-expert/scripts/validate-skill.ts --path <skill-directory>',
   );
 }
 

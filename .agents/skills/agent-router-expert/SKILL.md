@@ -13,19 +13,18 @@ The following rules apply to all documentation tasks, regardless of file extensi
 
 ### A. Tone of Voice
 
-- Maintain a highly didactic, clear, and encouraging educational tone. The primary reader is an student/researcher focused on learning, not a software developer.
-- Explain concepts thoroughly when writing plans or documentation. Break down complex steps so they are easy to study.
-- Keep the structure clean and direct, avoiding robotic chatter but remaining welcoming and instructive.
+- Maintain a senior, objective, and technical tone at all times, including in conversational responses, logs, and documentation.
+- Avoid preambles, introductory chatter, or conclusion summaries in all communications.
+- Keep sentences concise, clear, and direct.
 
-### B. Bilingual Language Policy
+### B. Strict English-First
 
-- All router files (`AGENTS.md`) and package/directory headers (`README.md`) MUST be written in English (en-US).
-- All technical documentation, extracted knowledge, and architectural briefs (especially within `docs/`) MUST be written in Portuguese (pt-BR).
-- All execution and study plans (especially within `.agents/plans/`) MUST be written in Portuguese (pt-BR).
+- All code, configuration, technical documentation, READMEs, architectural briefs, code comments/examples, commit messages, and pull request descriptions MUST be written in English (en-US).
+- Conversational chat responses with the user MUST be conducted in Brazilian Portuguese (pt-BR).
 
 ### C. Zero Emojis
 
-- Emojis are strictly forbidden in all technical documents, READMEs, and skill files to maintain a professional, corporate appearance.
+- Emojis are strictly forbidden in all agent conversational responses, chat messages, technical documents, READMEs, and skill files to maintain a professional, corporate appearance.
 
 ### D. Mermaid Diagram Standards
 
@@ -42,11 +41,10 @@ The following rules apply to all documentation tasks, regardless of file extensi
 
 - All files must comply with the root Prettier formatting rules (2-space indentation, max 100-character line width, hyphen-based unordered lists, and proper JavaScript/TypeScript code block styling).
 
-### G. Project Variables (Atualizado para @tupynambalucas/academic-lab)
+### G. Project Variables and Identifiers
 
-- **Contexto Central**: O projeto atual é o **@tupynambalucas/academic-lab**, de autoria de **Lucas Tupynambá**.
-- **Regra de Nomenclatura**: O nome do projeto e da autora DEVEM ser utilizados explicitamente na documentação e arquivos `AGENTS.md`. Fica estritamente proibido o uso de variáveis genéricas, placeholders ou tokens de AST (como `%PROJECT_DOMAIN%` ou `%PROJECT_NAME%`).
-- **Configuração**: Esta abordagem direta substitui a antiga configuração centralizada (`@monorepo/shared-config...`), simplificando a identificação do projeto.
+- **Concrete Names Required**: Project names, package identifiers, and domains MUST use their actual concrete values corresponding to the target repository in all `AGENTS.md` router files.
+- **No Unresolved Placeholder Tokens**: You MUST NOT leave unresolved placeholder tokens (such as `%PROJECT_DOMAIN%`, `<TBD>`, or TODO markers) in router context files unless specifically processed by an automated templating engine.
 
 ---
 
@@ -54,15 +52,16 @@ The following rules apply to all documentation tasks, regardless of file extensi
 
 Every Layer-2 and Layer-3 `AGENTS.md` file MUST include a `<context-hierarchy>` XML block as the
 very first content in the file. This directive instructs AI agents to read the parent context file
-before proceeding.
+before proceeding and sets explicit bounded context constraints.
 
 - The directive MUST appear before the H1 heading.
 - The `src` attribute MUST use a relative path to the parent `AGENTS.md`.
 - The `<system-instruction>` MUST use imperative language ("stop now and read").
+- The `<system-instruction>` MUST explicitly declare the bounded context using the **exact directory name** it resides in (e.g., "AGENT: You are operating in the `k8s` bounded context. You must read..."). This strict 1:1 mapping prevents path hallucination and grounds the agent's context.
 - The directive MUST NOT contain external URLs or absolute paths.
 
-See [syntax.md](./references/syntax.md) for the complete directive syntax specification.
-See [templates.md](./references/templates.md) for layer-specific directive examples.
+See [references/syntax.md](references/syntax.md) for the complete directive syntax specification.
+See [references/templates.md](references/templates.md) for layer-specific directive examples.
 
 ---
 
@@ -79,9 +78,9 @@ Use these guidelines when creating, updating, or analyzing `AGENTS.md` context f
   - Do not duplicate global rules (English-First, Zero Emojis, Zero Placeholders) in local sub-workspace context files.
   - **Line Budget**: Each layer has a maximum line budget. Exceeding the budget degrades token efficiency. Layer 1: 80 lines. Layer 2: 120 lines. Layer 3: 100 lines. Extract concrete code patterns to separate linked reference files when needed.
 - **Reference Files**:
-  - AI Agent syntax and path reference: [syntax.md](./references/syntax.md)
-  - Root, core, api, and web layouts: [patterns.md](./references/patterns.md)
-  - Verification, emoji auditing, and rule alignment: [workflow.md](./references/workflow.md)
+  - AI Agent syntax and path reference: [references/syntax.md](references/syntax.md)
+  - Root, core, api, and web layouts: [references/patterns.md](references/patterns.md)
+  - Verification, emoji auditing, and rule alignment: [references/workflow.md](references/workflow.md)
 
 ---
 
@@ -136,11 +135,11 @@ When an `AGENTS.md` file governs a workspace where agents perform documentation 
 
 **Rules**:
 
-- Skills MUST be declared by name only (e.g., `agent-router-expert`, `mdx-docs-expert`).
+- Skills MUST be declared by name only (e.g., `agent-router-expert`, `docusaurus-expert`).
 - Skills MUST NOT be referenced by filesystem path (e.g., `.agents/skills/agent-router-expert/`).
 - Name-only resolution is mandatory because agents running in isolated container environments resolve skills exclusively through the active runtime's skill registry, not the filesystem.
 - The Layer-1 root `AGENTS.md` declares global document-authoring skills (`agent-router-expert` and `markdown-expert`).
-- Bounded context `AGENTS.md` files declare context-specific skills only when the bounded context has a specialized authoring workflow (e.g., `docs/AGENTS.md` declares `mdx-docs-expert`).
+- Bounded context `AGENTS.md` files declare context-specific skills only when the bounded context has a specialized authoring workflow (e.g., `docs/AGENTS.md` declares `docusaurus-expert`).
 - Layer-3 sub-domain files do NOT repeat skill declarations from parent files.
 
 ---
@@ -149,12 +148,4 @@ When an `AGENTS.md` file governs a workspace where agents perform documentation 
 
 Before completing any documentation task, you must execute the verification steps defined in the workflow guide:
 
-- Follow the verification and audit steps in [workflow.md](./references/workflow.md).
-
----
-
-## Understanding Project Configurations and Goals
-
-When working in this project, you must align with the current study goals and configurations:
-- **config/src/project.config.ts**: Contains the technical variables of the project, including literal topics of study and documentation config. Use this file to understand the hard configurations.
-- **LEARNING_CONTEXT.md**: Contains the subjective, human-driven goals and short-term study targets. Always refer to this document to understand the underlying motives and adapt your responses to the user's current learning context.
+- Follow the verification and audit steps in [references/workflow.md](references/workflow.md).

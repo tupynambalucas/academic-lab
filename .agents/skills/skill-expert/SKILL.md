@@ -50,7 +50,7 @@ For complete frontmatter details, read [specification.md](./references/specifica
 
 ---
 
-## 3. Progressive Disclosure architecture
+## 3. Progressive Disclosure Architecture
 
 To prevent context window bloat, Antigravity loads skills through a 3-stage progressive disclosure
 model:
@@ -120,7 +120,7 @@ When bundling scripts in `scripts/`:
    warnings, or progress to `stderr`.
 4. **Actionable Error Messages**: Explain clearly what failed, what was expected, and how to fix it.
 5. **Self-Contained Dependencies**: Declare inline script dependencies (e.g., PEP 723 for Python via
-   `uv run`, or Node/TypeScript via `npx`/`tsx`).
+   `uv run`, or Node/TypeScript via `pnpm dlx tsx`).
 6. **Idempotency & Safety**: Support `--dry-run` for stateful or destructive modifications. Ensure
    operations can be retried safely.
 
@@ -160,16 +160,8 @@ Before concluding any skill creation or update, execute the automated validator 
 root:
 
 ```bash
-npx tsx .agents/skills/skill-expert/scripts/validate-skill.ts --path .agents/skills/<skill-name>
+pnpm dlx tsx .agents/skills/skill-expert/scripts/validate-skill.ts --path .agents/skills/<skill-name>
 ```
 
 Verify that the command exits with code `0`. Fix any flagged issues before declaring the task
 complete.
-
----
-
-## Understanding Project Configurations and Goals
-
-When working in this project, you must align with the current study goals and configurations:
-- **config/src/project.config.ts**: Contains the technical variables of the project, including literal topics of study and documentation config. Use this file to understand the hard configurations.
-- **LEARNING_CONTEXT.md**: Contains the subjective, human-driven goals and short-term study targets. Always refer to this document to understand the underlying motives and adapt your responses to the user's current learning context.
