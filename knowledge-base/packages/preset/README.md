@@ -4,7 +4,7 @@ The `@academic-lab/preset` package is a custom Docusaurus preset providing dynam
 
 ## Features
 
-- **Dynamic Collection Resolution**: Automatically routes `collection: 'docs-template'` to `collections/docs/docs-template` and `collection: 'blog-template'` to `collections/blogs/blog-template`.
+- **Dynamic Collection Resolution**: Automatically routes `collection: 'docs-main'` to `collections/docs/docs-main` and `collection: 'blog-main'` to `collections/blogs/blog-main`.
 - **Theme Integration**: Registers `@docusaurus/theme-classic`, `@academic-lab/theme`, codeblock playgrounds, and Mermaid diagrams.
 - **Remark Variable Transformer**: Injects project metadata into MDX frontmatter during compilation.
 - **Standardized Navigation & Sidebars**: Exports pre-configured `getBaseThemeConfig` and `sidebars` ready for portal applications.
@@ -24,13 +24,13 @@ presets: [
       docs: [
         {
           id: "default",
-          collection: "docs-template",
+          collection: "docs-main",
           routeBasePath: "docs",
           sidebarPath: require.resolve("@academic-lab/preset/sidebars"),
         },
       ],
       blog: {
-        collection: "blog-template",
+        collection: "blog-main",
         routeBasePath: "blog",
       },
     } satisfies MonorepoPresetOptions,

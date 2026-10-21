@@ -97,13 +97,13 @@ const config: Config = {
         docs: [
           {
             id: "default",
-            collection: "docs-template",
+            collection: "docs-main",
             routeBasePath: "docs",
             sidebarPath: require.resolve("@academic-lab/preset/sidebars"),
           },
         ],
         blog: {
-          collection: "blog-template",
+          collection: "blog-main",
           routeBasePath: "blog",
           showReadingTime: true,
           blogSidebarCount: "ALL",

@@ -17,10 +17,10 @@ This workspace (`@academic-lab/collections`) stores modular documentation and bl
 ## Directory Layout
 
 - [docs/](./docs/): Documentation collections structured under the Diátaxis framework.
-  - [docs/docs-template/](./docs/docs-template/): Base template covering explanation, guides, reference, and tutorials.
-  - [docs/community-template/](./docs/community-template/): Community roadmap and ecosystem guides.
+  - [docs/docs-main/](./docs/docs-main/): Primary documentation collection covering explanation, guides, reference, and tutorials.
+  - [docs/community-main/](./docs/community-main/): Community guidelines, study ethics, and academic roadmap.
 - [blogs/](./blogs/): Chronological and topic-based blog collections.
-  - [blogs/blog-template/](./blogs/blog-template/): Default blog template with author and tag configurations.
+  - [blogs/blog-main/](./blogs/blog-main/): Main technical blog collection with author and tag configurations.
 - [package.json](./package.json): Workspace package manifest defining subpath exports.
 
 ## Scoped Guardrails
@@ -28,5 +28,5 @@ This workspace (`@academic-lab/collections`) stores modular documentation and bl
 - MUST write all educational content inside docs/ and blogs/ in Brazilian Portuguese (pt-BR).
 - MUST use the .mdx file extension for all content files.
 - MUST structure documentation collections according to the four Diátaxis quadrants.
-- MUST keep templates clean with overview.mdx, intro.mdx, and _category_.json files.
+- MUST keep documents clean with overview.mdx, intro.mdx, and _category_.json files.
 - MUST NOT use emojis or placeholder tokens.

@@ -9,13 +9,13 @@ This workspace isolates academic and educational content from website runtime co
 ## Structure
 
 - [docs/](./docs/): Documentation collections organized by topic.
-  - [docs/docs-template/](./docs/docs-template/): Base documentation template structured around the Diátaxis framework (explanation/, guides/, reference/, tutorials/).
-  - [docs/community-template/](./docs/community-template/): Community roadmap and ecosystem notes.
+  - [docs/docs-main/](./docs/docs-main/): Primary documentation collection structured around the Diátaxis framework (explanation/, guides/, reference/, tutorials/).
+  - [docs/community-main/](./docs/community-main/): Community guidelines, study ethics, and academic roadmap.
 - [blogs/](./blogs/): Chronological and technical blog collections.
-  - [blogs/blog-template/](./blogs/blog-template/): Blog template including author and tag definitions.
+  - [blogs/blog-main/](./blogs/blog-main/): Technical blog articles including author and tag definitions.
 
 ## Authoring Standards
 
 1. **Extension Policy**: All content files must use the .mdx extension.
 2. **Language Standard**: All academic content is written natively in Brazilian Portuguese (pt-BR).
-3. **Template Integrity**: Keep base templates clean with overview.mdx, intro.mdx, and _category_.json files.
+3. **Template Integrity**: Keep base collections clean with overview.mdx, intro.mdx, and _category_.json files.

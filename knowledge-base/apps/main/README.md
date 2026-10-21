@@ -14,8 +14,8 @@ This workspace is strictly a presentation and compilation engine:
 
 Collections are declared by name in docusaurus.config.ts:
 
-- Docs collections: maps collection name (e.g. docs-template) to knowledge-base/collections/docs/docs-template.
-- Blog collections: maps collection name (e.g. blog-template) to knowledge-base/collections/blogs/blog-template.
+- Docs collections: maps collection name (e.g. docs-main) to knowledge-base/collections/docs/docs-main.
+- Blog collections: maps collection name (e.g. blog-main) to knowledge-base/collections/blogs/blog-main.
 
 ## Local Development & Build
 
