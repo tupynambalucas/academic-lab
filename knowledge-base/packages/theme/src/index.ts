@@ -27,7 +27,7 @@ export default function customThemePlugin(
   const srcTheme = path.resolve(__dirname, "..", "src", "theme");
 
   return {
-    name: "monorepo-custom-theme",
+    name: "academic-lab-theme",
 
     getThemePath() {
       return srcTheme;

@@ -7,7 +7,7 @@ import styles from "./styles.module.css";
 function GitHubLink() {
   return (
     <Link
-      href="https://github.com/tupynambalucas/tupynambalucas"
+      href="https://github.com/tupynambalucas/academic-lab"
       className={styles.github}
     >
       <b>GitHub</b>

@@ -115,7 +115,7 @@ const config: Config = {
 
   plugins: [
     () => ({
-      name: "monorepo-webpack-alias-plugin",
+      name: "academic-lab-webpack-alias-plugin",
       configureWebpack() {
         const docusaurusNodeModules = path.join(
           __dirname,

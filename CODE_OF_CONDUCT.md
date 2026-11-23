@@ -1,8 +1,8 @@
-# Lumini Estética Code of Conduct
+# Academic Lab Code of Conduct
 
 ## Our Pledge
 
-I, as the creator and maintainer of Lumini Estética, pledge to make participation in this project a
+I, as the creator and maintainer of Academic Lab, pledge to make participation in this project a
 harassment-free experience for everyone, regardless of age, body size, visible or invisible
 disability, ethnicity, sex characteristics, gender identity and expression, level of experience,
 education, socio-economic status, nationality, personal appearance, race, caste, color, religion, or
@@ -43,13 +43,13 @@ reasons for moderation decisions when appropriate.
 
 ## Scope
 
-This Code of Conduct applies within all community spaces related to Lumini Estética, and also
+This Code of Conduct applies within all community spaces related to Academic Lab, and also
 applies when an individual is officially representing the project in public spaces.
 
 ## Enforcement
 
 Instances of abusive, harassing, or otherwise unacceptable behavior may be reported directly to me
-at [contato@lumini-estetica.com.br](mailto:contato@lumini-estetica.com.br). All complaints will be reviewed and investigated
+at [contato@tupynambalucas.dev](mailto:contato@tupynambalucas.dev). All complaints will be reviewed and investigated
 promptly and fairly.
 
 I am obligated to respect the privacy and security of the reporter of any incident.

@@ -6,7 +6,11 @@ import type {
   PluginConfig,
   PluginOptions,
 } from "@docusaurus/types";
-import type { MonorepoPresetOptions, ThemeConfig } from "./options";
+import type {
+  MonorepoPresetOptions,
+  AcademicLabPresetOptions,
+  ThemeConfig,
+} from "./options";
 
 import { createDocsInstances } from "./plugins/content-docs/instances";
 import { createBlogInstance } from "./plugins/content-blog/instances";
@@ -149,7 +153,11 @@ export default function monorepoPreset(
   return { themes, plugins };
 }
 
-export type { MonorepoPresetOptions, ThemeConfig };
+export type {
+  MonorepoPresetOptions,
+  AcademicLabPresetOptions,
+  ThemeConfig,
+};
 
 export {
   createProjectVariablesParseFrontMatter,
