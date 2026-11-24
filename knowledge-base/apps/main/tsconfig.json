@@ -10,5 +10,6 @@
     },
     "ignoreDeprecations": "6.0"
   },
-  "include": ["src", "docusaurus.config.ts"]
+  "include": ["src", "docusaurus.config.ts"],
+  "references": [{ "path": "../../packages/preset" }, { "path": "../../packages/theme" }]
 }

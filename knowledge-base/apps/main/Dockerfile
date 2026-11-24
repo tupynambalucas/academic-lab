@@ -1,5 +1,5 @@
 # =================================================================== #
-# @monorepo/kb-docusaurus-portal — Multi-Stage Dockerfile
+# @academic-lab/app-main — Multi-Stage Dockerfile
 # Stages:
 # - base: Shared Node.js runtime and Corepack/pnpm setup
 # - builder: Workspace dependencies compilation and static build
@@ -14,24 +14,23 @@ RUN corepack enable pnpm
 
 # ---- Stage 2: Builder ----
 FROM base AS builder
-COPY package.json pnpm-workspace.yaml pnpm-lock.yaml turbo.json CHANGELOG*.md ROADMAP.md ./
-COPY corporate/ corporate/
-COPY shared/ shared/
-COPY hub/studio/assets/ hub/studio/assets/
-RUN pnpm install --filter=@monorepo/kb-docusaurus-portal...
-RUN pnpm --filter @monorepo/kb-docusaurus-portal... build
+COPY package.json pnpm-workspace.yaml pnpm-lock.yaml turbo.json ./
+COPY config/ config/
+COPY knowledge-base/ knowledge-base/
+RUN pnpm install --filter=@academic-lab/app-main...
+RUN pnpm --filter @academic-lab/app-main... build
 
 # ---- Stage 3: Dev Profile (Build & Run) ----
 FROM base AS dev
 COPY --from=builder /app /app
-WORKDIR /app/corporate/services/portal
+WORKDIR /app/knowledge-base/apps/main
 ENV NODE_ENV=development
 EXPOSE 3002
 CMD ["pnpm", "exec", "docusaurus", "start", "--host", "0.0.0.0", "--port", "3002", "--poll", "1000"]
 
 # ---- Stage 4: Prod Profile (Run) ----
 FROM nginx:alpine AS prod
-COPY --from=builder /app/corporate/services/portal/build /usr/share/nginx/html
+COPY --from=builder /app/knowledge-base/apps/main/build /usr/share/nginx/html
 RUN sed -i 's/listen       80;/listen       3002;/g' /etc/nginx/conf.d/default.conf
 EXPOSE 3002
 CMD ["nginx", "-g", "daemon off;"]

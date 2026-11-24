@@ -31,6 +31,8 @@ export type MonorepoPresetOptions = {
   googleTagManager?: GTMPluginOptions;
 };
 
+export type AcademicLabPresetOptions = MonorepoPresetOptions;
+
 export type ThemeConfig = BaseThemeConfig &
   ClassicThemeConfig &
   AlgoliaThemeConfig;
